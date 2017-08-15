@@ -7,7 +7,11 @@ const ComponentExamples: Array<RNTesterExample> = [
     {
         key: 'ActivityIndicatorExample',
         module: require('./ActivityIndicatorExample'),
-    }
+    },
+    {
+        key: 'ButtonExample',
+        module: require('./ButtonExample'),
+    },
 ];
 const APIExamples: Array<RNTesterExample> = [];
 const Modules = {};

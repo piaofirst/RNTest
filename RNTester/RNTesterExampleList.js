@@ -181,7 +181,7 @@ class RNTesterExampleList extends Component {
 }
 
 const ItemSeparator = ({highlighted}) => {
-    <View style={highlighted ? styles.separatorHighlighted : styles.separator}/>
+   return <View style={highlighted ? styles.separatorHighlighted : styles.separator}/>
 }
 
 export default RNTesterExampleList = RNTesterStatePersister.createContainer(RNTesterExampleList,{

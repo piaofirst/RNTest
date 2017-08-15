@@ -8,7 +8,13 @@ const ComponentExamples: Array<RNTesterExample> = [
         key: 'ActivityIndicatorExample',
         module: require('./ActivityIndicatorExample'),
         supportsTVOS: true,
-    },];
+    },
+    {
+        key: 'ButtonExample',
+        module: require('./ButtonExample'),
+        supportsTVOS: true,
+    },
+];
 const APIExamples: Array<RNTesterExample> = [];
 const Modules = {};
 
