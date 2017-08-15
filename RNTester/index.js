@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import RNTesterNavigationReducer from  './RNTesterNavigationReducer';
 import RNTesterExampleList from './RNTesterExampleList'
-// import RNTesterExampleContainer from './RNTesterExampleContainer'
+import RNTesterExampleContainer from './RNTesterExampleContainer'
 const RNTesterList = require('./RNTesterList');
 import type { RNTesterNavigationState } from './RNTesterNavigationReducer';
 import RNTesterActions from './RNTesterActions';
@@ -46,30 +46,21 @@ export default class RNTesterApp extends Component {
 
     render() {
         if(!this.state){
-            // console.log("return null");
             return null;
         }
-        console.log("this.state")
-        console.log(this.state)
         if(this.state.openExample){
             const Component = RNTesterList.Modules[this.state.openExample];
-            console.log('aaaaaaa')
             if(Component.external){
-                console.log('bbbbbbbbbbbb')
                 return (
                     <Component
                         onExampleExit={this._handleBack}
                     />
                 );
             }else if (Component){
-                console.log('ccccccc')
-                console.log(Component)
-                console.log(Component.title)
-                console.log('ddddddd')
                 return(
                     <View style={styles.exampleContainer}>
                         <Header onBack={this._handleBack} title={Component.title}/>
-                        {/*<RNTesterExampleContainer module={Component} />*/}
+                        <RNTesterExampleContainer module={Component} />
                     </View>
                 )
             }
@@ -86,11 +77,11 @@ export default class RNTesterApp extends Component {
     }
 
     _handleBack = () => {
-        this._handleAction(RNTesterActions.Back());
+        return this._handleAction(RNTesterActions.Back());
     }
-    _handleAction = (action: ?RNTesterAction) => {
+    _handleAction = (action: ?RNTesterAction): boolean => {
         if(!action){
-            return null;
+            return true;
         }
         const newState = RNTesterNavigationReducer(this.state, action)
         if (this.state !== newState){
@@ -98,7 +89,9 @@ export default class RNTesterApp extends Component {
                 newState,
                 //todo
             )
+            return true
         }
+        return false;
     }
 }
 
