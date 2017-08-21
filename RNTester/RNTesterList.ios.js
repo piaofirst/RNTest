@@ -14,6 +14,11 @@ const ComponentExamples: Array<RNTesterExample> = [
         module: require('./ButtonExample'),
         supportsTVOS: true,
     },
+    {
+        key: 'FlatListExample',
+        module: require('./FlatListExample'),
+        supportsTVOS: true,
+    },
 ];
 const APIExamples: Array<RNTesterExample> = [];
 const Modules = {};

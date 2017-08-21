@@ -49,6 +49,6 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
 });
-import RNTesterApp from './RNTester'
+import RNTesterApp from './RNTester/index'
 // AppRegistry.registerComponent('RNTest', () => RNTest);
 AppRegistry.registerComponent('RNTest', () => RNTesterApp);
