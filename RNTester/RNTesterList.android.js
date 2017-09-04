@@ -16,6 +16,10 @@ const ComponentExamples: Array<RNTesterExample> = [
         key: 'FlatListExample',
         module: require('./FlatListExample'),
     },
+    {
+        key: 'ImageExample',
+        module: require('./ImageExample'),
+    },
 ];
 const APIExamples: Array<RNTesterExample> = [];
 const Modules = {};
