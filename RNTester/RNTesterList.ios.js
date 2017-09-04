@@ -24,6 +24,11 @@ const ComponentExamples: Array<RNTesterExample> = [
         module: require('./ImageExample'),
         supportsTVOS: true,
     },
+    {
+        key: 'ListViewExample',
+        module: require('./ListViewExample'),
+        supportsTVOS: true,
+    },
 ];
 const APIExamples: Array<RNTesterExample> = [];
 const Modules = {};

@@ -20,6 +20,10 @@ const ComponentExamples: Array<RNTesterExample> = [
         key: 'ImageExample',
         module: require('./ImageExample'),
     },
+    {
+        key: 'ListViewExample',
+        module: require('./ListViewExample'),
+    },
 ];
 const APIExamples: Array<RNTesterExample> = [];
 const Modules = {};
