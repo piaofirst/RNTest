@@ -24,6 +24,10 @@ const ComponentExamples: Array<RNTesterExample> = [
         key: 'ListViewExample',
         module: require('./ListViewExample'),
     },
+    {
+        key: 'ListViewGridLayoutExample',
+        module: require('./ListViewGridLayoutExample'),
+    },
 ];
 const APIExamples: Array<RNTesterExample> = [];
 const Modules = {};

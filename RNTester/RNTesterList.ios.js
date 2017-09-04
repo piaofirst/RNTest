@@ -29,6 +29,11 @@ const ComponentExamples: Array<RNTesterExample> = [
         module: require('./ListViewExample'),
         supportsTVOS: true,
     },
+    {
+        key: 'ListViewGridLayoutExample',
+        module: require('./ListViewGridLayoutExample'),
+        supportsTVOS: true,
+    },
 ];
 const APIExamples: Array<RNTesterExample> = [];
 const Modules = {};
